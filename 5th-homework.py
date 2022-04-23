@@ -1,4 +1,3 @@
-# Write your code here :-)
 odd = []
 even = []
 for i in range(1, 100, 2):
@@ -10,7 +9,12 @@ print(even)
 new = odd + even
 new.sort()
 print(new)
-for i, value in enumerate(new):
-    if value % 5 == 0:
-        del new[i]
+index = 0
+while index < len(new):
+    if new[index] % 5 == 0:
+        del new[index]
+    else:
+        index += 1
+#new = [value for value in new if value % 5 != 0]
+#new = list(filter(lambda x: x % 5 != 0, new))
 print(new)
